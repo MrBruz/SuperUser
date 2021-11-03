@@ -1,0 +1,2 @@
+$action = New-ScheduledTaskAction -Execute $env:windir\System32\cleanmgr.exe -Argument "/autoclean /d $env:systemdrive"
+Set-ScheduledTask -TaskName SilentCleanup -TaskPath \Microsoft\Windows\DiskCleanup\ -action $action
